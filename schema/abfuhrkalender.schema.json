@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://daten.muelllotse.de/schema/abfuhrkalender.schema.json",
+  "title": "Abfuhrkalender",
+  "description": "Offener Standard für maschinenlesbare Abfuhrkalender deutscher Entsorger. Kernprinzip: EXPLIZITE Termine (inkl. Feiertagsverschiebungen), nie Serienregeln.",
+  "type": "object",
+  "required": ["version", "herausgeber", "gebiet", "gueltigVon", "gueltigBis", "touren"],
+  "properties": {
+    "version": {
+      "const": "1.0"
+    },
+    "herausgeber": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string", "description": "Entsorger/örE, z. B. 'Berliner Stadtreinigung'" },
+        "url": { "type": "string", "format": "uri" },
+        "kontakt": { "type": "string" }
+      }
+    },
+    "gebiet": {
+      "type": "object",
+      "required": ["ags"],
+      "properties": {
+        "ags": { "type": "string", "pattern": "^[0-9]{8}$", "description": "Amtlicher Gemeindeschlüssel" },
+        "name": { "type": "string" }
+      }
+    },
+    "gueltigVon": { "type": "string", "format": "date" },
+    "gueltigBis": { "type": "string", "format": "date" },
+    "lizenz": { "type": "string", "default": "dl-de/by-2-0" },
+    "touren": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["fraktion", "termine"],
+        "properties": {
+          "fraktion": {
+            "type": "string",
+            "enum": ["restmuell", "bio", "papier", "lvp", "glas", "gruenschnitt", "schadstoffmobil", "sperrmuell", "weihnachtsbaum", "laubsack", "sonstiges"],
+            "description": "Kontrolliertes Vokabular; 'lvp' = Gelbe Tonne/Sack/Wertstofftonne"
+          },
+          "bezeichnung": { "type": "string", "description": "Lokaler Name, z. B. 'Wertstoffe' (Berlin)" },
+          "strassen": {
+            "type": "array",
+            "description": "Geltungsbereich; leer/fehlend = ganzes Gebiet",
+            "items": {
+              "type": "object",
+              "required": ["name"],
+              "properties": {
+                "name": { "type": "string" },
+                "hausnummern": { "type": "string", "description": "Bereich, z. B. '1-27 ungerade'; fehlend = alle" }
+              }
+            }
+          },
+          "termine": {
+            "type": "array",
+            "items": { "type": "string", "format": "date" },
+            "minItems": 1,
+            "description": "Explizite Abholtage inkl. aller Verschiebungen — Clients rechnen NICHTS hoch"
+          }
+        }
+      }
+    }
+  }
+}

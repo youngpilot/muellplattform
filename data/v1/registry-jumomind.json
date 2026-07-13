@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Altötting (Landkreis)",
+    "url": "https://www.lra-aoe.de",
+    "service": "aoe"
+  },
+  {
+    "title": "Aurich (MKW)",
+    "url": "https://mkw-grossefehn.de",
+    "service": "lka"
+  },
+  {
+    "title": "Bad Homburg v. d. Höhe",
+    "url": "https://www.bad-homburg.de",
+    "service": "hom"
+  },
+  {
+    "title": "Barnim (Kreiswerke)",
+    "url": "https://www.kreiswerke-barnim.de",
+    "service": "bdg"
+  },
+  {
+    "title": "Darmstadt-Dieburg (ZAW)",
+    "url": "https://www.zaw-online.de",
+    "service": "zaw"
+  },
+  {
+    "title": "Hattersheim am Main",
+    "url": "https://www.hattersheim.de",
+    "service": "hat"
+  },
+  {
+    "title": "Ingolstadt",
+    "url": "https://www.in-kb.de",
+    "service": "ingol"
+  },
+  {
+    "title": "Lübbecke",
+    "url": "https://www.luebbecke.de",
+    "service": "lue"
+  },
+  {
+    "title": "Main-Kinzig-Kreis",
+    "url": "https://www.abfall-mkk.de",
+    "service": "mkk"
+  },
+  {
+    "title": "Minden",
+    "url": "https://www.minden.de",
+    "service": "sbm"
+  },
+  {
+    "title": "MyMüll-App (viele Kommunen)",
+    "url": "https://www.mymuell.de",
+    "service": "mymuell"
+  },
+  {
+    "title": "Neustadt a. d. Weinstraße",
+    "url": "https://www.neustadt.eu",
+    "service": "esn"
+  },
+  {
+    "title": "Ostholstein (ZVO)",
+    "url": "https://www.zvo.com",
+    "service": "zvo"
+  },
+  {
+    "title": "Recklinghausen (KSR)",
+    "url": "https://www.zbh-ksr.de",
+    "service": "ksr"
+  },
+  {
+    "title": "Rhein-Hunsrück (RHE)",
+    "url": "https://www.rh-entsorgung.de",
+    "service": "rhe"
+  },
+  {
+    "title": "Uckermark (UDG)",
+    "url": "https://www.udg-uckermark.de",
+    "service": "udg"
+  }
+]

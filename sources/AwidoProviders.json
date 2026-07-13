@@ -1,0 +1,347 @@
+[
+  {
+    "title": "AWB Landkreis Bad Dürkheim",
+    "url": "http://awb.kreis-bad-duerkheim.de/",
+    "customer": "awb-duerkheim"
+  },
+  {
+    "title": "AWB Landkreis Fürstenfeldbruck",
+    "url": "https://www.awb-ffb.de/",
+    "customer": "ffb"
+  },
+  {
+    "title": "Abfall-Wirtschafts-Verband Nordschwaben",
+    "url": "https://www.awv-nordschwaben.de/",
+    "customer": "awv-nordschwaben"
+  },
+  {
+    "title": "Abfallwirtschaft Isar-Inn",
+    "url": "https://www.awv-isar-inn.de/",
+    "customer": "awv-isar-inn"
+  },
+  {
+    "title": "Abfallwirtschaft Lahn-Dill-Kreises",
+    "url": "https://www.awld.de/",
+    "customer": "awld"
+  },
+  {
+    "title": "Abfallwirtschaft Rems-Murr (AWRM) - AWIDO Version",
+    "url": "https://www.abfallwirtschaft-rems-murr.de/",
+    "customer": "rmk"
+  },
+  {
+    "title": "Abfallwirtschafts-Zweckverband des Landkreises Hersfeld-Rotenburg",
+    "url": "https://www.azv-hef-rof.de/",
+    "customer": "azv-hef-rof"
+  },
+  {
+    "title": "Abfallwirtschaftsbetrieb Landkreis Altenkirchen",
+    "url": "https://www.awb-ak.de/",
+    "customer": "awb-ak"
+  },
+  {
+    "title": "Anzing",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Aßling",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Baiern",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Bruck",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Ebersberg",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Egmating",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Emmering",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Forstinning",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Frauenneuharting",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Gemeinde Unterhaching",
+    "url": "https://www.unterhaching.de/",
+    "customer": "unterhaching"
+  },
+  {
+    "title": "Glonn",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Grafing",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Hohenlinden",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Ingelsberg (Zorneding)",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Kirchseeon",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Landkreis Ansbach",
+    "url": "https://www.landkreis-ansbach.de/",
+    "customer": "ansbach"
+  },
+  {
+    "title": "Landkreis Aschaffenburg",
+    "url": "https://www.landkreis-aschaffenburg.de/",
+    "customer": "lra-ab"
+  },
+  {
+    "title": "Landkreis Berchtesgadener Land",
+    "url": "https://www.lra-bgl.de/",
+    "customer": "bgl"
+  },
+  {
+    "title": "Landkreis Coburg",
+    "url": "https://www.landkreis-coburg.de/",
+    "customer": "coburg"
+  },
+  {
+    "title": "Landkreis Erding",
+    "url": "https://www.landkreis-erding.de/",
+    "customer": "erding"
+  },
+  {
+    "title": "Landkreis Fulda",
+    "url": "https://www.landkreis-fulda.de/",
+    "customer": "fulda"
+  },
+  {
+    "title": "Landkreis Gießen",
+    "url": "https://www.lkgi.de/",
+    "customer": "lkgi"
+  },
+  {
+    "title": "Landkreis Gifhorn",
+    "url": "https://www.gifhorn.de/",
+    "customer": "gifhorn"
+  },
+  {
+    "title": "Landkreis Gotha",
+    "url": "https://www.landkreis-gotha.de/",
+    "customer": "gotha"
+  },
+  {
+    "title": "Landkreis Günzburg",
+    "url": "https://kaw.landkreis-guenzburg.de/",
+    "customer": "kaw-guenzburg"
+  },
+  {
+    "title": "Landkreis Kelheim",
+    "url": "https://www.landkreis-kelheim.de/",
+    "customer": "kelheim"
+  },
+  {
+    "title": "Landkreis Kronach",
+    "url": "https://www.landkreis-kronach.de/",
+    "customer": "kronach"
+  },
+  {
+    "title": "Landkreis Kulmbach",
+    "url": "https://www.landkreis-kulmbach.de/",
+    "customer": "kulmbach"
+  },
+  {
+    "title": "Landkreis Lichtenfels",
+    "url": "https://www.lkr-lif.de/",
+    "customer": "lichtenfels"
+  },
+  {
+    "title": "Landkreis Mühldorf a. Inn",
+    "url": "https://www.lra-mue.de/",
+    "customer": "lra-mue"
+  },
+  {
+    "title": "Landkreis Rosenheim",
+    "url": "https://www.abfall.landkreis-rosenheim.de/",
+    "customer": "rosenheim"
+  },
+  {
+    "title": "Landkreis Roth",
+    "url": "https://www.landratsamt-roth.de/",
+    "customer": "roth"
+  },
+  {
+    "title": "Landkreis Schweinfurt",
+    "url": "https://www.landkreis-schweinfurt.de",
+    "customer": "lra-schweinfurt"
+  },
+  {
+    "title": "Landkreis Südliche Weinstraße",
+    "url": "https://www.suedliche-weinstrasse.de/",
+    "customer": "eww-suew"
+  },
+  {
+    "title": "Landkreis Tirschenreuth",
+    "url": "https://www.kreis-tir.de/",
+    "customer": "kreis-tir"
+  },
+  {
+    "title": "Landkreis Tübingen",
+    "url": "https://www.abfall-kreis-tuebingen.de/",
+    "customer": "tuebingen"
+  },
+  {
+    "title": "Landkreisbetriebe Neuburg-Schrobenhausen",
+    "url": "https://www.landkreisbetriebe.de/",
+    "customer": "landkreisbetriebe"
+  },
+  {
+    "title": "Landratsamt Aichach-Friedberg",
+    "url": "https://lra-aic-fdb.de/",
+    "customer": "aic-fdb"
+  },
+  {
+    "title": "Landratsamt Dachau",
+    "url": "https://www.landratsamt-dachau.de/",
+    "customer": "lra-dah"
+  },
+  {
+    "title": "Landratsamt Regensburg",
+    "url": "https://www.landkreis-regensburg.de/",
+    "customer": "lra-regensburg"
+  },
+  {
+    "title": "Markt Schwaben",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Moosach",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Neustadt a.d. Waldnaab",
+    "url": "https://www.neustadt.de/",
+    "customer": "neustadt"
+  },
+  {
+    "title": "Oberpframmern",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Pliening",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Poing",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Pullach im Isartal",
+    "url": "https://www.pullach.de/",
+    "customer": "pullach"
+  },
+  {
+    "title": "Pöring (Zorneding)",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Stadt Fulda",
+    "url": "https://www.fulda.de/",
+    "customer": "fulda-stadt"
+  },
+  {
+    "title": "Stadt Kaufbeuren",
+    "url": "https://www.kaufbeuren.de/",
+    "customer": "kaufbeuren"
+  },
+  {
+    "title": "Stadt Königstein im Taunus",
+    "url": "https://www.koenigstein.de/",
+    "customer": "koenigstein"
+  },
+  {
+    "title": "Stadt Memmingen",
+    "url": "https://umwelt.memmingen.de/",
+    "customer": "memmingen"
+  },
+  {
+    "title": "Stadt Regensburg",
+    "url": "https://www.regensburg.de/",
+    "customer": "regensburg"
+  },
+  {
+    "title": "Stadt Unterschleißheim",
+    "url": "https://www.unterschleissheim.de/",
+    "customer": "unterschleissheim"
+  },
+  {
+    "title": "Steinhöring",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Vaterstetten",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "WGV Recycling GmbH",
+    "url": "https://wgv-quarzbichl.de/",
+    "customer": "wgv"
+  },
+  {
+    "title": "Wolfesing (Zorneding)",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Zorneding",
+    "url": "https://www.lra-ebe.de/",
+    "customer": "ebe"
+  },
+  {
+    "title": "Zweckverband Abfallwirtschaft Saale-Orla",
+    "url": "https://www.zaso-online.de/",
+    "customer": "zaso"
+  },
+  {
+    "title": "Zweckverband München-Südost",
+    "url": "https://www.zvmso.de/",
+    "customer": "zv-muc-so"
+  }
+]

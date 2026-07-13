@@ -1,0 +1,137 @@
+[
+  {
+    "title": "AWA Entsorgungs GmbH",
+    "url": "https://www.awa-gmbh.de/",
+    "service": "zew2"
+  },
+  {
+    "title": "AWG Kreis Warendorf",
+    "url": "https://www.awg-waf.de/",
+    "service": "krwaf"
+  },
+  {
+    "title": "Abfallwirtschaft Stadt Nürnberg",
+    "url": "https://www.nuernberg.de/",
+    "service": "nuernberg"
+  },
+  {
+    "title": "Abfallwirtschaftsbetrieb Bergisch Gladbach",
+    "url": "https://www.bergischgladbach.de/",
+    "service": "aw-bgl2"
+  },
+  {
+    "title": "Abfallwirtschaftsverband Lippe",
+    "url": "https://www.abfall-lippe.de/",
+    "service": "awvlippe"
+  },
+  {
+    "title": "Bergischer Abfallwirtschaftverbund",
+    "url": "https://www.bavweb.de/",
+    "service": "bav"
+  },
+  {
+    "title": "Dinslaken",
+    "url": "https://www.dinslaken.de/",
+    "service": "din"
+  },
+  {
+    "title": "EGW Westmünsterland",
+    "url": "https://www.egw.de/",
+    "service": "wml2"
+  },
+  {
+    "title": "GWA - Kreis Unna mbH",
+    "url": "https://www.gwa-online.de/",
+    "service": "unna"
+  },
+  {
+    "title": "Gemeinde Kranenburg",
+    "url": "https://www.kranenburg.de/",
+    "service": "kranenburg"
+  },
+  {
+    "title": "Halver",
+    "url": "https://www.halver.de/",
+    "service": "hlv"
+  },
+  {
+    "title": "Kreis Coesfeld",
+    "url": "https://wbc-coesfeld.de/",
+    "service": "coe"
+  },
+  {
+    "title": "Kreis Heinsberg",
+    "url": "https://www.kreis-heinsberg.de/",
+    "service": "krhs"
+  },
+  {
+    "title": "Kreis Pinneberg",
+    "url": "https://www.kreis-pinneberg.de/",
+    "service": "pi"
+  },
+  {
+    "title": "Kreis Viersen",
+    "url": "https://www.kreis-viersen.de/",
+    "service": "viersen"
+  },
+  {
+    "title": "Kronberg im Taunus",
+    "url": "https://www.kronberg.de/",
+    "service": "kronberg"
+  },
+  {
+    "title": "MHEG Mülheim an der Ruhr",
+    "url": "https://www.mheg.de/",
+    "service": "muelheim"
+  },
+  {
+    "title": "STL Lüdenscheid",
+    "url": "https://www.stl-luedenscheid.de/",
+    "service": "stl"
+  },
+  {
+    "title": "Stadt Aachen",
+    "url": "https://www.aachen.de",
+    "service": "aachen"
+  },
+  {
+    "title": "Stadt Cottbus",
+    "url": "https://www.cottbus.de/",
+    "service": "cottbus"
+  },
+  {
+    "title": "Stadt Cuxhaven",
+    "url": "https://www.cuxhaven.de/",
+    "service": "cux"
+  },
+  {
+    "title": "Stadt Dorsten",
+    "url": "https://www.ebd-dorsten.de/",
+    "service": "dorsten"
+  },
+  {
+    "title": "Stadt Frankenthal",
+    "url": "https://www.frankenthal.de/",
+    "service": "frankenthal"
+  },
+  {
+    "title": "Stadt Norderstedt",
+    "url": "https://www.betriebsamt-norderstedt.de/",
+    "service": "nds"
+  },
+  {
+    "title": "Stadt Porta Westfalica",
+    "url": "https://www.portawestfalica.de/",
+    "service": "portawestfalica"
+  },
+  {
+    "title": "Stadt Solingen",
+    "url": "https://www.solingen.de/",
+    "service": "solingen"
+  },
+  {
+    "title": "WBO Wirtschaftsbetriebe Oberhausen",
+    "url": "https://www.wbo-online.de/",
+    "service": "oberhausen"
+  }
+]

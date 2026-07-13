@@ -1,0 +1,15 @@
+[
+  {"title": "USB Bochum", "url": "https://www.usb-bochum.de", "service": "Usb"},
+  {"title": "AWM Münster", "url": "https://www.stadt-muenster.de", "service": "Awm"},
+  {"title": "Entsorgungsbetrieb Mainz", "url": "https://eb-mainz.de", "service": "Ebm"},
+  {"title": "EVS Entsorgungsverband Saar", "url": "https://www.evs.de", "service": "Evs"},
+  {"title": "Landkreis Gießen", "url": "https://www.lkgi.de", "service": "Lkg"},
+  {"title": "Stadt Hamm", "url": "https://www.hamm.de", "service": "Ash"},
+  {"title": "Stadt Darmstadt (EAD)", "url": "https://www.darmstadt.de", "service": "Ead"},
+  {"title": "TBR Remscheid", "url": "https://www.tbr-info.de", "service": "Tbr"},
+  {"title": "Stadtbildpflege Kaiserslautern", "url": "https://www.stadtbildpflege-kl.de", "service": "Ask"},
+  {"title": "Stadt Hanau (HIS)", "url": "https://www.hanau.de", "service": "His"},
+  {"title": "Stadt Maintal", "url": "https://www.maintal.de", "service": "Mai"},
+  {"title": "Stadt Haltern am See", "url": "https://www.haltern-am-see.de", "service": "Hal"},
+  {"title": "Kreisstadt Friedberg (Hessen)", "url": "https://www.friedberg-hessen.de", "service": "Efb"}
+]

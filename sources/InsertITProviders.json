@@ -1,0 +1,9 @@
+[
+  {"title": "Stadt Hattingen", "url": "https://www.hattingen.de", "service": "BmsAbfallkalenderHattingen"},
+  {"title": "Stadt Herne", "url": "https://www.herne.de", "service": "BmsAbfallkalenderHerne"},
+  {"title": "Stadt Kassel", "url": "https://www.kassel.de", "service": "BmsAbfallkalenderKassel"},
+  {"title": "Stadt Krefeld", "url": "https://www.krefeld.de", "service": "BmsAbfallkalenderKrefeld"},
+  {"title": "Hansestadt Lübeck", "url": "https://www.luebeck.de", "service": "BmsAbfallkalenderLuebeck"},
+  {"title": "Stadt Mannheim", "url": "https://www.mannheim.de", "service": "BmsAbfallkalenderMannheim"},
+  {"title": "Stadt Offenbach", "url": "https://www.offenbach.de", "service": "BmsAbfallkalenderOffenbach"}
+]

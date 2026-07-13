@@ -1,0 +1,107 @@
+[
+  {
+    "title": "Bremer Stadtreinigung",
+    "url": "https://www.die-bremer-stadtreinigung.de",
+    "service": "bremenabfallkalender",
+    "subdomain": "web",
+    "icalFile": "cal",
+    "ort": "Bremen"
+  },
+  {
+    "title": "AWB Landkreis Augsburg",
+    "url": "https://www.awb-landkreis-augsburg.de",
+    "service": "augsburglandkreis",
+    "subdomain": "web",
+    "icalFile": "cal"
+  },
+  {
+    "title": "WZV Kreis Segeberg",
+    "url": "https://www.wzv.de",
+    "service": "segebergwzv-abfallkalender",
+    "subdomain": "web",
+    "icalFile": "cal"
+  },
+  {
+    "title": "Main-Tauber-Kreis",
+    "url": "https://www.main-tauber-kreis.de",
+    "service": "maintauberkreis-abfallkalender",
+    "subdomain": "web",
+    "icalFile": "cal"
+  },
+  {
+    "title": "Kreisstadt Dietzenbach",
+    "url": "https://www.dietzenbach.de",
+    "service": "dietzenbach",
+    "subdomain": "web",
+    "icalFile": "cal",
+    "ort": ""
+  },
+  {
+    "title": "Rheingau-Taunus-Kreis (EAW)",
+    "url": "https://www.eaw-rheingau-taunus.de",
+    "service": "rheingauleerungen",
+    "subdomain": "web",
+    "icalFile": "cal"
+  },
+  {
+    "title": "Kreis Groß-Gerau (AWV)",
+    "url": "https://www.awv-gg.de",
+    "service": "grossgeraulandkreis-abfallkalender",
+    "subdomain": "web",
+    "icalFile": "cal"
+  },
+  {
+    "title": "Stadt Bayreuth",
+    "url": "https://www.bayreuth.de",
+    "service": "bayreuthstadt-abfallkalender",
+    "subdomain": "web",
+    "icalFile": "cal",
+    "ort": ""
+  },
+  {
+    "title": "Stadt Arnsberg",
+    "url": "https://www.arnsberg.de",
+    "service": "arnsberg-abfallkalender",
+    "subdomain": "web",
+    "icalFile": "cal",
+    "ort": ""
+  },
+  {
+    "title": "EWB Landau in der Pfalz",
+    "url": "https://www.ew-landau.de",
+    "service": "web.landau",
+    "subdomain": "apps",
+    "icalFile": "downloadcal",
+    "ort": ""
+  },
+  {
+    "title": "Landkreis Roth",
+    "url": "https://www.landratsamt-roth.de",
+    "service": "web.roth",
+    "subdomain": "apps",
+    "icalFile": "cal"
+  },
+  {
+    "title": "Landkreis Aurich (AWB)",
+    "url": "https://www.awb-aurich.de",
+    "service": "web.aurich-abfallkalender",
+    "subdomain": "apps",
+    "icalFile": "cal"
+  },
+  {
+    "title": "Kreisstadt St. Wendel",
+    "url": "https://www.sankt-wendel.de",
+    "service": "web.stwendel",
+    "subdomain": "apps",
+    "icalFile": "downloadcal",
+    "ort": ""
+  },
+  {
+    "title": "Bau & Service Oberursel",
+    "url": "https://www.bso-oberursel.de",
+    "service": "web.oberursel",
+    "subdomain": "apps",
+    "icalFile": "cal",
+    "ort": ""
+  }
+]

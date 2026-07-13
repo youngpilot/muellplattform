@@ -1,0 +1,39 @@
+# Nightly: Gesundheitsprobe gegen die Quellsysteme + Artefakte neu bauen.
+# Committet nur bei echten Änderungen. Bei Proben-Ausfällen schlägt der Job
+# fehl → GitHub-Mail als Alert. Cloudflare Pages deployt den data/-Ordner
+# automatisch bei jedem Push auf main.
+name: nightly
+on:
+  schedule:
+    - cron: "17 3 * * *"   # 03:17 UTC — außerhalb der Stoßzeiten der Quellsysteme
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Gesundheitsprobe
+        id: probe
+        continue-on-error: true
+        run: python3 scripts/health_probe.py
+      - name: Artefakte bauen
+        run: python3 scripts/build_artifacts.py
+      - name: Änderungen committen
+        run: |
+          git config user.name "muellplattform-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "nightly: Artefakte $(date -u +%F)"
+          git push
+      - name: Bei Proben-Ausfall Job rot markieren
+        if: steps.probe.outcome == 'failure'
+        run: |
+          echo "::error::Mindestens ein Quellsystem antwortet nicht — data/v1/health.json prüfen"
+          exit 1

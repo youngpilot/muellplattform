@@ -37,6 +37,12 @@ jobs:
           git add data/
           git diff --cached --quiet || git commit -m "nightly: Artefakte $(date -u +%F)"
           git push
+      - name: Aufs CDN deployen (Cloudflare Pages Direct Upload)
+        if: env.CF_TOKEN != ''
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: npx -y wrangler@latest pages deploy data --project-name muellplattform --branch main --commit-dirty=true
       - name: Bei Proben-Ausfall Job rot markieren
         if: steps.probe.outcome == 'failure'
         run: |

@@ -1,7 +1,7 @@
 {
   "apiVersion": "v1",
-  "generatedAt": "2026-07-13T12:44:05+00:00",
-  "commit": null,
+  "generatedAt": "2026-07-13T12:56:23+00:00",
+  "commit": "ec645de",
   "providerCount": 175,
   "files": {
     "coverage.json": "0552e9986382b1ab738e71fe0d39d48df08060dc5d89efef19248ab566ca8506",

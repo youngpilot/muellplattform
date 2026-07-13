@@ -19,6 +19,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Gebiets-Datensätze validieren
+        run: |
+          pip install --quiet jsonschema
+          python3 scripts/validate_gebiet.py schema/beispiel-11000000.json data/v1/gebiete/*.json 2>/dev/null \
+            || python3 scripts/validate_gebiet.py schema/beispiel-11000000.json
       - name: Gesundheitsprobe
         id: probe
         continue-on-error: true

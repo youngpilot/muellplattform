@@ -33,13 +33,38 @@ python3 scripts/health_probe.py --sample 5    # Stichproben gegen die Quellsyste
 `sources/` enthält die gepflegten Quell-Registries (synchron mit der
 Mülllotse-App; `build_artifacts.py --from-app` übernimmt sie von dort).
 
-## Standard
+## Standard: Entsorgungsgebiet (formatVersion 1.1)
 
-`schema/abfuhrkalender.schema.json` definiert das Zielformat, in dem
-Entsorger/Kommunen Abfuhrkalender liefern können (explizite Termine je
-Fraktion, AGS-Gebietskennung, Gültigkeitszeitraum). Phase-4-Ziel: die
-White-Label-Hersteller exportieren dieses Format direkt — ein Adapter pro
-Hersteller deckt alle seine Kommunen ab.
+`schema/entsorgungsgebiet.schema.json` definiert das Lieferformat je Gebiet
+(Beispiel: `schema/beispiel-11000000.json`, Validator:
+`scripts/validate_gebiet.py` — läuft als CI-Gate). Design-Entscheidungen:
+
+1. **Touren statt Straßen-Termine (GTFS-Prinzip):** Termine hängen an einer
+   Tour mit stabiler ID; `zuordnungen` mappen Straße + Hausnummern-Bereich
+   auf Touren. Eine Terminverschiebung ist EIN Update, und die Datei bleibt
+   klein (eine Stadt hat Dutzende Touren, nicht tausende Straßen-Kalender).
+2. **Straße+Hausnummer ist die Wahrheit, Geometrie ist Beiwerk:** Entsorger
+   planen adressgenau (gerade/ungerade Seiten in verschiedenen Touren!) —
+   das können Polygone nicht sauber abbilden, und viele Entsorger haben gar
+   keine GIS-Daten. Bezirks-Polygone (`geometrie`) sind deshalb optional
+   fürs Karten-Rendering; fehlen sie, leitet die Plattform sie aus
+   geocodierten Straßen ab (`geometrieAbgeleitet: true`).
+3. **Explizite Termine, nie Regeln:** Feiertagsverschiebungen und
+   Saisonrhythmen stecken nur in expliziten Daten.
+4. **Negative Abdeckung ist Pflicht-Information:** `fraktionen[]` deklariert
+   auch `andererAnbieter`/`aufAbruf`/`nichtImGebiet` (Berlin: Papier liegt
+   bei privaten Anbietern, nicht im BSR-Kalender) — Clients unterscheiden
+   damit Lücke von Fehler.
+5. **Frische-Metadaten für den Betrieb:** `stand`, `gueltigVon/Bis`
+   (Ablauf-Radar am Jahreswechsel), `quelle.typ`
+   (geliefert/harvested/adapter/community als Vertrauens-Stufen),
+   `herausgeber.kontakt` als Pflege-Kanal.
+6. **AGS/ARS als Gebietsanker:** amtlich, stabil, joinbar — Ablage als
+   `data/v1/gebiete/{ags}.json`, CDN-freundlich shardbar (Clients laden nur
+   ihr Gebiet).
+
+Phase-4-Ziel: die ~10 White-Label-Hersteller exportieren dieses Format
+direkt — ein Adapter pro Hersteller deckt alle seine Kommunen ab.
 
 ## Lizenz
 

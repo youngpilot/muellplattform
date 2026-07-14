@@ -1,11 +1,11 @@
 {
   "apiVersion": "v1",
-  "generatedAt": "2026-07-13T12:56:23+00:00",
-  "commit": "ec645de",
+  "generatedAt": "2026-07-14T05:41:01+00:00",
+  "commit": "1ff7999",
   "providerCount": 175,
   "files": {
     "coverage.json": "0552e9986382b1ab738e71fe0d39d48df08060dc5d89efef19248ab566ca8506",
-    "health.json": "8abd8de520002a81e9844e4f1c9def87ed5dada873f6c334d2029ca4c6840489",
+    "health.json": "55d9458dfa5cbb2118b51b7559b7b06b03b25f46c15cfc248d682820705e4157",
     "places.json": "bd461e89253dadf3d93bd6ec3303f04fc666c657a82ac168d11dbdef8151252e",
     "registry-abfallio.json": "273060dee574e8e7f6b2ae3c558b5a4a70aac6832354fc86539ffbf206f398e8",
     "registry-abfallnavi.json": "b80cbd985e60a7adf394cb2d9af592576009effb5da62d6623e05d9c6bed1b47",

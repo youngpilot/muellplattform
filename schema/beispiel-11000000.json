@@ -1,9 +1,12 @@
 {
-  "formatVersion": "1.1",
+  "formatVersion": "1.2",
   "gebiet": {
     "ags": "11000000",
     "name": "Berlin",
-    "plz": ["10319", "10367"]
+    "plz": [
+      "10319",
+      "10367"
+    ]
   },
   "herausgeber": {
     "name": "Berliner Stadtreinigung (BSR)",
@@ -20,9 +23,32 @@
   "gueltigBis": "2027-06-30",
   "lizenz": "dl-de/by-2-0",
   "fraktionen": [
-    { "fraktion": "restmuell", "status": "enthalten" },
-    { "fraktion": "bio", "status": "enthalten" },
-    { "fraktion": "lvp", "status": "enthalten" },
+    {
+      "fraktion": "restmuell",
+      "status": "enthalten",
+      "verwertung": {
+        "weg": "verbrennung",
+        "beschreibung": "Thermische Verwertung mit Energiegewinnung (Strom und Fernwärme), Metallrückgewinnung aus der Schlacke",
+        "anlage": "MHKW Ruhleben"
+      }
+    },
+    {
+      "fraktion": "bio",
+      "status": "enthalten",
+      "verwertung": {
+        "weg": "vergaerung",
+        "beschreibung": "Vergärung zu Biogas, Gärreste werden zu Kompost",
+        "anlage": "Biogasanlage Ruhleben"
+      }
+    },
+    {
+      "fraktion": "lvp",
+      "status": "enthalten",
+      "verwertung": {
+        "weg": "sortierung",
+        "beschreibung": "Sortierung nach Materialart, sortenreine Kunststoffe und Metalle werden werkstofflich recycelt, Reste energetisch verwertet"
+      }
+    },
     {
       "fraktion": "papier",
       "status": "andererAnbieter",
@@ -40,20 +66,34 @@
       "id": "hm-lichtenberg-di",
       "fraktion": "restmuell",
       "bezeichnung": "Hausmüll",
-      "termine": ["2026-07-06", "2026-07-14", "2026-07-20", "2026-07-27"],
+      "termine": [
+        "2026-07-06",
+        "2026-07-14",
+        "2026-07-20",
+        "2026-07-27"
+      ],
       "hinweis": "Bereitstellung bis 6 Uhr"
     },
     {
       "id": "bio-lichtenberg-mi",
       "fraktion": "bio",
       "bezeichnung": "Biogut",
-      "termine": ["2026-07-01", "2026-07-08", "2026-07-15", "2026-07-22", "2026-07-29"]
+      "termine": [
+        "2026-07-01",
+        "2026-07-08",
+        "2026-07-15",
+        "2026-07-22",
+        "2026-07-29"
+      ]
     },
     {
       "id": "ws-lichtenberg-do",
       "fraktion": "lvp",
       "bezeichnung": "Wertstoffe",
-      "termine": ["2026-07-09", "2026-07-23"],
+      "termine": [
+        "2026-07-09",
+        "2026-07-23"
+      ],
       "geometrieAbgeleitet": true
     }
   ],
@@ -61,11 +101,19 @@
     {
       "strasse": "Dolgenseestraße",
       "hausnummern": "1-13 ungerade",
-      "touren": ["hm-lichtenberg-di", "bio-lichtenberg-mi", "ws-lichtenberg-do"]
+      "touren": [
+        "hm-lichtenberg-di",
+        "bio-lichtenberg-mi",
+        "ws-lichtenberg-do"
+      ]
     },
     {
       "strasse": "Möllendorffstraße",
-      "touren": ["hm-lichtenberg-di", "bio-lichtenberg-mi", "ws-lichtenberg-do"]
+      "touren": [
+        "hm-lichtenberg-di",
+        "bio-lichtenberg-mi",
+        "ws-lichtenberg-do"
+      ]
     }
   ],
   "abholorte": [
@@ -75,7 +123,11 @@
       "lat": 52.5292,
       "lon": 13.4702,
       "termine": [
-        { "datum": "2026-08-04", "von": "09:00", "bis": "12:00" }
+        {
+          "datum": "2026-08-04",
+          "von": "09:00",
+          "bis": "12:00"
+        }
       ]
     }
   ]

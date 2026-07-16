@@ -63,6 +63,12 @@ Mülllotse-App; `build_artifacts.py --from-app` übernimmt sie von dort).
    `data/v1/gebiete/{ags}.json`, CDN-freundlich shardbar (Clients laden nur
    ihr Gebiet).
 
+**v1.2 (additiv):** `fraktionen[].verwertung` — Entsorger hinterlegen den
+lokalen Verwertungsweg je Fraktion (recycling/verbrennung/vergaerung/…,
+Anlage, Recyclingquote, Info-URL). Ziel: Transparenz darüber, was mit dem
+Müll tatsächlich passiert — angezeigt z. B. im Tonnen-Wissen der
+Mülllotse-App, das bis dahin bundesweit übliche Verwertungswege nennt.
+
 Phase-4-Ziel: die ~10 White-Label-Hersteller exportieren dieses Format
 direkt — ein Adapter pro Hersteller deckt alle seine Kommunen ab.
 

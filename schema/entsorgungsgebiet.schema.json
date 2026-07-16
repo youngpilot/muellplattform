@@ -2,125 +2,338 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://daten.muelllotse.de/schema/entsorgungsgebiet.schema.json",
   "title": "Entsorgungsgebiet",
-  "description": "Offener Standard für maschinenlesbare Entsorgungsdaten eines Gebiets. Design-Prinzipien: (1) Termine hängen an TOUREN, nicht an Straßen — eine Terminänderung ist ein Update (GTFS-Prinzip). (2) Straße+Hausnummern-Bereich → Tour ist die operative Wahrheit der Entsorger; Geometrie ist optional bzw. abgeleitet und dient der Visualisierung. (3) Explizite Termine inkl. aller Verschiebungen — Clients rechnen nichts hoch. (4) Fraktions-Abdeckung wird auch NEGATIV deklariert, damit Clients Lücke von Fehler unterscheiden können (Beispiel Berlin: Papier liegt beim privaten Anbieter, nicht im BSR-Kalender).",
+  "description": "Offener Standard für maschinenlesbare Entsorgungsdaten eines Gebiets. Design-Prinzipien: (1) Termine hängen an TOUREN, nicht an Straßen — eine Terminänderung ist ein Update (GTFS-Prinzip). (2) Straße+Hausnummern-Bereich → Tour ist die operative Wahrheit der Entsorger; Geometrie ist optional bzw. abgeleitet und dient der Visualisierung. (3) Explizite Termine inkl. aller Verschiebungen — Clients rechnen nichts hoch. (4) Fraktions-Abdeckung wird auch NEGATIV deklariert, damit Clients Lücke von Fehler unterscheiden können (Beispiel Berlin: Papier liegt beim privaten Anbieter, nicht im BSR-Kalender). (5) Ab v1.2: Entsorger können je Fraktion den lokalen VERWERTUNGSWEG hinterlegen (verwertung) — Transparenz darüber, was mit dem Müll tatsächlich passiert (Recycling, Verbrennung, Vergärung, Export …).",
   "type": "object",
-  "required": ["formatVersion", "gebiet", "herausgeber", "quelle", "stand", "gueltigVon", "gueltigBis", "fraktionen", "touren"],
+  "required": [
+    "formatVersion",
+    "gebiet",
+    "herausgeber",
+    "quelle",
+    "stand",
+    "gueltigVon",
+    "gueltigBis",
+    "fraktionen",
+    "touren"
+  ],
   "$defs": {
     "fraktion": {
       "type": "string",
-      "enum": ["restmuell", "bio", "papier", "lvp", "glas", "gruenschnitt", "schadstoffmobil", "sperrmuell", "weihnachtsbaum", "laubsack", "sonstiges"],
+      "enum": [
+        "restmuell",
+        "bio",
+        "papier",
+        "lvp",
+        "glas",
+        "gruenschnitt",
+        "schadstoffmobil",
+        "sperrmuell",
+        "weihnachtsbaum",
+        "laubsack",
+        "sonstiges"
+      ],
       "description": "Kontrolliertes Vokabular; 'lvp' = Gelber Sack/Gelbe Tonne/Wertstofftonne"
     },
-    "datum": { "type": "string", "format": "date" }
+    "datum": {
+      "type": "string",
+      "format": "date"
+    }
   },
   "properties": {
-    "formatVersion": { "const": "1.1" },
-
+    "formatVersion": {
+      "enum": [
+        "1.1",
+        "1.2"
+      ]
+    },
     "gebiet": {
       "type": "object",
-      "required": ["ags", "name"],
+      "required": [
+        "ags",
+        "name"
+      ],
       "properties": {
-        "ags": { "type": "string", "pattern": "^[0-9]{8}$", "description": "Amtlicher Gemeindeschlüssel (Pflicht-Anker, stabil, joinbar mit Zensus/Destatis)" },
-        "ars": { "type": "string", "pattern": "^[0-9]{12}$", "description": "Amtlicher Regionalschlüssel für Gemeindeteile (optional, feiner als AGS)" },
-        "name": { "type": "string" },
-        "plz": { "type": "array", "items": { "type": "string", "pattern": "^[0-9]{5}$" }, "description": "PLZ-Liste als Such-Hilfe, nicht als Zuordnungs-Wahrheit" }
+        "ags": {
+          "type": "string",
+          "pattern": "^[0-9]{8}$",
+          "description": "Amtlicher Gemeindeschlüssel (Pflicht-Anker, stabil, joinbar mit Zensus/Destatis)"
+        },
+        "ars": {
+          "type": "string",
+          "pattern": "^[0-9]{12}$",
+          "description": "Amtlicher Regionalschlüssel für Gemeindeteile (optional, feiner als AGS)"
+        },
+        "name": {
+          "type": "string"
+        },
+        "plz": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9]{5}$"
+          },
+          "description": "PLZ-Liste als Such-Hilfe, nicht als Zuordnungs-Wahrheit"
+        }
       }
     },
-
     "herausgeber": {
       "type": "object",
-      "required": ["name"],
+      "required": [
+        "name"
+      ],
       "properties": {
-        "name": { "type": "string", "description": "Entsorger/örE, z. B. 'Berliner Stadtreinigung'" },
-        "url": { "type": "string", "format": "uri" },
-        "kontakt": { "type": "string", "description": "E-Mail für Rückfragen/Fehlermeldungen — Pflege-Kanal der Plattform" }
+        "name": {
+          "type": "string",
+          "description": "Entsorger/örE, z. B. 'Berliner Stadtreinigung'"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "kontakt": {
+          "type": "string",
+          "description": "E-Mail für Rückfragen/Fehlermeldungen — Pflege-Kanal der Plattform"
+        }
       }
     },
-
     "quelle": {
       "type": "object",
-      "required": ["typ"],
+      "required": [
+        "typ"
+      ],
       "description": "Herkunft des Datensatzes — Grundlage für Frische-Monitoring und Vertrauens-Einstufung",
       "properties": {
-        "typ": { "type": "string", "enum": ["geliefert", "harvested", "adapter", "community"], "description": "geliefert = Entsorger publiziert dieses Format selbst; harvested = von seinem Open-Data-Endpunkt geerntet; adapter = aus inoffizieller API übersetzt; community = aus Nutzer-Spenden aggregiert" },
-        "url": { "type": "string", "format": "uri" },
-        "abgerufenAm": { "type": "string", "format": "date-time" }
+        "typ": {
+          "type": "string",
+          "enum": [
+            "geliefert",
+            "harvested",
+            "adapter",
+            "community"
+          ],
+          "description": "geliefert = Entsorger publiziert dieses Format selbst; harvested = von seinem Open-Data-Endpunkt geerntet; adapter = aus inoffizieller API übersetzt; community = aus Nutzer-Spenden aggregiert"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "abgerufenAm": {
+          "type": "string",
+          "format": "date-time"
+        }
       }
     },
-
-    "stand": { "$ref": "#/$defs/datum", "description": "Datenstand laut Quelle" },
-    "gueltigVon": { "$ref": "#/$defs/datum" },
-    "gueltigBis": { "$ref": "#/$defs/datum", "description": "Ablauf-Radar: die Plattform meldet Gebiete, deren Kalender in < 6 Wochen endet" },
-    "lizenz": { "type": "string", "default": "dl-de/by-2-0" },
-
+    "stand": {
+      "$ref": "#/$defs/datum",
+      "description": "Datenstand laut Quelle"
+    },
+    "gueltigVon": {
+      "$ref": "#/$defs/datum"
+    },
+    "gueltigBis": {
+      "$ref": "#/$defs/datum",
+      "description": "Ablauf-Radar: die Plattform meldet Gebiete, deren Kalender in < 6 Wochen endet"
+    },
+    "lizenz": {
+      "type": "string",
+      "default": "dl-de/by-2-0"
+    },
     "fraktionen": {
       "type": "array",
       "description": "Abdeckungs-Deklaration je Fraktion — auch negativ",
       "items": {
         "type": "object",
-        "required": ["fraktion", "status"],
+        "required": [
+          "fraktion",
+          "status"
+        ],
         "properties": {
-          "fraktion": { "$ref": "#/$defs/fraktion" },
-          "status": { "type": "string", "enum": ["enthalten", "nichtImGebiet", "andererAnbieter", "aufAbruf"] },
-          "hinweis": { "type": "string", "description": "z. B. 'Blaue Tonne: private Anbieter (ALBA, Berlin Recycling)'" },
-          "anbieterUrl": { "type": "string", "format": "uri", "description": "Buchungs-/Info-URL (aufAbruf: Sperrmüll-Buchung; andererAnbieter: dessen Kalender)" }
+          "fraktion": {
+            "$ref": "#/$defs/fraktion"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "enthalten",
+              "nichtImGebiet",
+              "andererAnbieter",
+              "aufAbruf"
+            ]
+          },
+          "hinweis": {
+            "type": "string",
+            "description": "z. B. 'Blaue Tonne: private Anbieter (ALBA, Berlin Recycling)'"
+          },
+          "anbieterUrl": {
+            "type": "string",
+            "format": "uri",
+            "description": "Buchungs-/Info-URL (aufAbruf: Sperrmüll-Buchung; andererAnbieter: dessen Kalender)"
+          },
+          "verwertung": {
+            "type": "object",
+            "description": "Lokaler Verwertungsweg dieser Fraktion — vom Entsorger gepflegt. Baut Wissen und Transparenz über Entsorgung und Recycling auf.",
+            "required": [
+              "weg"
+            ],
+            "properties": {
+              "weg": {
+                "type": "string",
+                "enum": [
+                  "recycling",
+                  "verbrennung",
+                  "kompostierung",
+                  "vergaerung",
+                  "sortierung",
+                  "deponie",
+                  "export",
+                  "wiederverwendung"
+                ],
+                "description": "Primärer Weg; 'sortierung' = Sortieranlage mit nachgelagertem Mix aus Recycling und energetischer Verwertung"
+              },
+              "beschreibung": {
+                "type": "string",
+                "description": "Klartext, z. B. 'Vergärung im Biogaswerk Ruhleben, Gärreste werden kompostiert'"
+              },
+              "anlage": {
+                "type": "string",
+                "description": "Name/Ort der Anlage, z. B. 'MHKW Ruhleben'"
+              },
+              "recyclingquote": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100,
+                "description": "Werkstofflich verwerteter Anteil in Prozent, falls bekannt"
+              },
+              "infoUrl": {
+                "type": "string",
+                "format": "uri"
+              }
+            }
+          }
         }
       }
     },
-
     "touren": {
       "type": "array",
       "description": "Normalisierte Abfuhr-Touren: viele Straßen teilen einen Terminplan",
       "items": {
         "type": "object",
-        "required": ["id", "fraktion", "termine"],
+        "required": [
+          "id",
+          "fraktion",
+          "termine"
+        ],
         "properties": {
-          "id": { "type": "string", "description": "Stabil über Jahreswechsel hinweg (z. B. 'rest-bezirk-3') — Diffs und Client-Abos hängen daran" },
-          "fraktion": { "$ref": "#/$defs/fraktion" },
-          "bezeichnung": { "type": "string", "description": "Lokaler Name, z. B. 'Wertstoffe' (Berlin)" },
-          "termine": { "type": "array", "items": { "$ref": "#/$defs/datum" }, "minItems": 1 },
-          "hinweis": { "type": "string", "description": "z. B. 'Bereitstellung bis 6 Uhr'" },
-          "geometrie": { "type": "object", "description": "GeoJSON Polygon/MultiPolygon des Bezirks — NUR für Visualisierung/Vorauswahl, nie für die adressgenaue Zuordnung maßgeblich" },
-          "geometrieAbgeleitet": { "type": "boolean", "description": "true = von der Plattform aus geocodierten Straßen berechnet, nicht vom Entsorger geliefert" }
+          "id": {
+            "type": "string",
+            "description": "Stabil über Jahreswechsel hinweg (z. B. 'rest-bezirk-3') — Diffs und Client-Abos hängen daran"
+          },
+          "fraktion": {
+            "$ref": "#/$defs/fraktion"
+          },
+          "bezeichnung": {
+            "type": "string",
+            "description": "Lokaler Name, z. B. 'Wertstoffe' (Berlin)"
+          },
+          "termine": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/datum"
+            },
+            "minItems": 1
+          },
+          "hinweis": {
+            "type": "string",
+            "description": "z. B. 'Bereitstellung bis 6 Uhr'"
+          },
+          "geometrie": {
+            "type": "object",
+            "description": "GeoJSON Polygon/MultiPolygon des Bezirks — NUR für Visualisierung/Vorauswahl, nie für die adressgenaue Zuordnung maßgeblich"
+          },
+          "geometrieAbgeleitet": {
+            "type": "boolean",
+            "description": "true = von der Plattform aus geocodierten Straßen berechnet, nicht vom Entsorger geliefert"
+          }
         }
       }
     },
-
     "zuordnungen": {
       "type": "array",
       "description": "Operative Wahrheit: Straße (+ Hausnummern-Bereich) → Tour je Fraktion. FEHLT die Zuordnung einer Fraktion komplett, gilt deren einzige Tour gebietsweit.",
       "items": {
         "type": "object",
-        "required": ["strasse", "touren"],
+        "required": [
+          "strasse",
+          "touren"
+        ],
         "properties": {
-          "strasse": { "type": "string", "description": "Amtliche Schreibweise; Clients normalisieren (str./straße, Umlaute)" },
-          "strassenschluessel": { "type": "string", "description": "Amtlicher Straßenschlüssel, falls vorhanden — stabiler als der Name" },
-          "hausnummern": { "type": "string", "description": "z. B. '1-27', '2-40 gerade', '9E'; fehlend = ganze Straße" },
-          "touren": { "type": "array", "items": { "type": "string" }, "minItems": 1, "description": "Tour-IDs aller Fraktionen dieser Adresse" }
+          "strasse": {
+            "type": "string",
+            "description": "Amtliche Schreibweise; Clients normalisieren (str./straße, Umlaute)"
+          },
+          "strassenschluessel": {
+            "type": "string",
+            "description": "Amtlicher Straßenschlüssel, falls vorhanden — stabiler als der Name"
+          },
+          "hausnummern": {
+            "type": "string",
+            "description": "z. B. '1-27', '2-40 gerade', '9E'; fehlend = ganze Straße"
+          },
+          "touren": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "description": "Tour-IDs aller Fraktionen dieser Adresse"
+          }
         }
       }
     },
-
     "abholorte": {
       "type": "array",
       "description": "Punkt-Termine mit Zeitfenster (Schadstoffmobil, mobile Grünschnitt-Annahme) — kein Tour-Muster",
       "items": {
         "type": "object",
-        "required": ["fraktion", "name", "lat", "lon", "termine"],
+        "required": [
+          "fraktion",
+          "name",
+          "lat",
+          "lon",
+          "termine"
+        ],
         "properties": {
-          "fraktion": { "$ref": "#/$defs/fraktion" },
-          "name": { "type": "string", "description": "z. B. 'Parkplatz Rathaus'" },
-          "lat": { "type": "number" },
-          "lon": { "type": "number" },
+          "fraktion": {
+            "$ref": "#/$defs/fraktion"
+          },
+          "name": {
+            "type": "string",
+            "description": "z. B. 'Parkplatz Rathaus'"
+          },
+          "lat": {
+            "type": "number"
+          },
+          "lon": {
+            "type": "number"
+          },
           "termine": {
             "type": "array",
             "items": {
               "type": "object",
-              "required": ["datum"],
+              "required": [
+                "datum"
+              ],
               "properties": {
-                "datum": { "$ref": "#/$defs/datum" },
-                "von": { "type": "string", "pattern": "^[0-2][0-9]:[0-5][0-9]$" },
-                "bis": { "type": "string", "pattern": "^[0-2][0-9]:[0-5][0-9]$" }
+                "datum": {
+                  "$ref": "#/$defs/datum"
+                },
+                "von": {
+                  "type": "string",
+                  "pattern": "^[0-2][0-9]:[0-5][0-9]$"
+                },
+                "bis": {
+                  "type": "string",
+                  "pattern": "^[0-2][0-9]:[0-5][0-9]$"
+                }
               }
             }
           }

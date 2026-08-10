@@ -87,9 +87,19 @@ def check_jumomind(entry):
 
 
 def check_abfallnavi(entry):
+    """Zwei Hosting-Muster: historischer Per-Service-Host und ein zentraler
+    Host, auf den einzelne Anbieter migriert sind. Die App probiert in
+    ScheduleConnectorsPlus ebenfalls beide durch.
+    """
     service = entry.get("service") or entry.get("id")
-    data = get(f"https://{service}-abfallapp.regioit.de/abfall-app-{service}/rest/orte")
-    return data.startswith(b"[")
+    for base in (f"https://{service}-abfallapp.regioit.de/abfall-app-{service}/rest",
+                 f"https://abfallapp.regioit.de/abfall-app-{service}/rest"):
+        try:
+            if get(f"{base}/orte").startswith(b"["):
+                return True
+        except Exception:  # noqa: BLE001 — nächsten Host probieren
+            continue
+    return False
 
 
 # --- Systeme mit festem, anbieterunabhängigem Endpunkt ---------------------

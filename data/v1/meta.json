@@ -1,12 +1,12 @@
 {
   "apiVersion": "v1",
-  "generatedAt": "2026-09-23T08:36:02+00:00",
-  "commit": "6cc526b",
-  "providerCount": 175,
+  "generatedAt": "2026-09-23T16:27:45+00:00",
+  "commit": "ebf476b",
+  "providerCount": 176,
   "files": {
-    "coverage.json": "0552e9986382b1ab738e71fe0d39d48df08060dc5d89efef19248ab566ca8506",
+    "coverage.json": "61409a8ce30fe9b4254e3a5f0af651b94fd31749ef4620ef88312df1646ee15a",
     "health.json": "b69c2a89d6d70928cdf25436f2b25d352622a9b32c9bbacbd77e34d267deda52",
-    "places.json": "bd461e89253dadf3d93bd6ec3303f04fc666c657a82ac168d11dbdef8151252e",
+    "places.json": "d5c1e2395a65bf84baeb0916e4e18bc1fce07a15d572513f57b0ec6e902c5e10",
     "registry-abfallio.json": "a174d3a0a31b84403678df20a0d1ed4b75a4d1dbe86b9f2a2be54151f3b05006",
     "registry-abfallnavi.json": "b80cbd985e60a7adf394cb2d9af592576009effb5da62d6623e05d9c6bed1b47",
     "registry-awido.json": "c96eb6279d842910e2bdcfa5a421ad18264827cb4598466fb630059bdaea16db",
@@ -14,6 +14,6 @@
     "registry-insertit.json": "0069c1468648309c1428aed39e2618fbded72266d6c7aedd152e44e37f32dbb4",
     "registry-jumomind.json": "392a8abdc222b7f5550bdf0c28cb8a8ef8c628a036d4331fb3930cfc8c81760d",
     "registry-muellmax.json": "d155b063c3627e9db76cd5c3608e84d894b3540ca8b2f01c62d4e8093aabab90",
-    "registry.json": "c41ffeafead29aef3d4c89dcb3367888ea6835fc00f4bfdf6a096c5f99e14cc3"
+    "registry.json": "194de87e398df0074258ca043ae7a3551c2aa73b06160b4c005807ba9db5eb8d"
   }
 }

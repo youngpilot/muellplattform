@@ -60,6 +60,7 @@ def unified_registry():
         {"system": "bsr", "id": "bsr-berlin", "titel": "Berliner Stadtreinigung (BSR)"},
         {"system": "srh", "id": "srh-hamburg", "titel": "Stadtreinigung Hamburg"},
         {"system": "awm", "id": "awm-muenchen", "titel": "AWM München"},
+        {"system": "fes", "id": "fes-frankfurt", "titel": "FES Frankfurt am Main"},
     ]
     return sorted(entries, key=lambda e: (e["system"], e["titel"]))
 

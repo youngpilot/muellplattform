@@ -61,6 +61,18 @@ def unified_registry():
         {"system": "srh", "id": "srh-hamburg", "titel": "Stadtreinigung Hamburg"},
         {"system": "awm", "id": "awm-muenchen", "titel": "AWM München"},
         {"system": "fes", "id": "fes-frankfurt", "titel": "FES Frankfurt am Main"},
+        {"system": "aha", "id": "aha-hannover", "titel": "aha Region Hannover"},
+        {"system": "athos", "id": "athos-bielefeld", "titel": "Umweltbetrieb Bielefeld"},
+        {"system": "athos", "id": "athos-bonn", "titel": "bonnorange Bonn"},
+        {"system": "athos", "id": "athos-augsburg", "titel": "AWS Augsburg"},
+        {"system": "awb", "id": "awb-koeln", "titel": "AWB Köln"},
+        {"system": "srl", "id": "sr-leipzig", "titel": "Stadtreinigung Leipzig"},
+        {"system": "abfallio3", "id": "abfallio3-essen", "titel": "EBE Essen"},
+        {"system": "abfallio3", "id": "abfallio3-duisburg", "titel": "Wirtschaftsbetriebe Duisburg"},
+        {"system": "abfallio3", "id": "abfallio3-freiburg", "titel": "ASF Freiburg"},
+        {"system": "elw", "id": "elw-wiesbaden", "titel": "ELW Wiesbaden"},
+        {"system": "gelsendienste", "id": "gd-gelsenkirchen", "titel": "Gelsendienste Gelsenkirchen"},
+        {"system": "abk", "id": "abk-kiel", "titel": "ABK Kiel"},
     ]
     return sorted(entries, key=lambda e: (e["system"], e["titel"]))
 

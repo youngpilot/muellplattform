@@ -73,6 +73,10 @@ def unified_registry():
         {"system": "elw", "id": "elw-wiesbaden", "titel": "ELW Wiesbaden"},
         {"system": "gelsendienste", "id": "gd-gelsenkirchen", "titel": "Gelsendienste Gelsenkirchen"},
         {"system": "abk", "id": "abk-kiel", "titel": "ABK Kiel"},
+        {"system": "mags", "id": "mags-mg", "titel": "mags Mönchengladbach"},
+        {"system": "alba", "id": "alba-bs", "titel": "ALBA Braunschweig"},
+        {"system": "sab", "id": "sab-magdeburg", "titel": "SAB Magdeburg"},
+        {"system": "asr", "id": "asr-chemnitz", "titel": "ASR Chemnitz"},
     ]
     return sorted(entries, key=lambda e: (e["system"], e["titel"]))
 
